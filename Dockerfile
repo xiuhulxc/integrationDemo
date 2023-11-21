@@ -17,4 +17,4 @@ ENV JAVA_OPTS="\
 -Xms1g \
 -XX:-OmitStackTraceInFastThrow"
 ENTRYPOINT java ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom -jar /usr/local/jar/app.jar --spring.profiles.active=$ENV_PROFILE
-集成
+
