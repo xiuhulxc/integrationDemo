@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service("roleService")
 public class RoleServiceImpl implements RoleService {
-    private RoleDao roleDao;
+    private final RoleDao roleDao;
 
     public RoleServiceImpl(RoleDao roleDao) {
         this.roleDao = roleDao;
@@ -18,6 +18,7 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public String doSomething(String something) {
         List<Role> roles = roleDao.listResourceRoles();
+//        List<Role> roles = roleDao.selectList(null);
         roles.forEach(System.out::println);
         return something;
     }

@@ -10,7 +10,6 @@ import java.util.List;
 public interface RoleDao extends BaseMapper<Role> {
     /**
      * 查询路由角色列表
-     *
      * @return 角色标签
      */
     List<Role> listResourceRoles();

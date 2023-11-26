@@ -35,7 +35,7 @@ spring:
 
 # mp setting
 mybatis-plus:
-  mapper-locations: classpath*:com/example/demo/mapper/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
   global-config:
     db-config:
       table-prefix:
@@ -44,5 +44,20 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # hump
     map-underscore-to-camel-case: true
-com:
-  example
+
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      packages-to-scan: com.example.demo.module.system.controller
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
