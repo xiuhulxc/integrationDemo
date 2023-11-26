@@ -1,11 +1,11 @@
-package com.example.demo.exception;
+package com.example.demo.common.exception;
 
 
-import com.example.demo.enums.StatusCodeEnum;
+import com.example.demo.common.enums.StatusCodeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import static com.example.demo.enums.StatusCodeEnum.FAIL;
+import static com.example.demo.common.enums.StatusCodeEnum.FAIL;
 
 
 /**

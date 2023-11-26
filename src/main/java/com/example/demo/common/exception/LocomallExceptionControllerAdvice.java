@@ -1,11 +1,11 @@
-package com.example.demo.exception;
+package com.example.demo.common.exception;
 
 import com.example.demo.common.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import static com.example.demo.enums.StatusCodeEnum.SYSTEM_ERROR;
+import static com.example.demo.common.enums.StatusCodeEnum.SYSTEM_ERROR;
 
 @RestControllerAdvice(basePackages = "com.example.demo.controller")
 @Slf4j
