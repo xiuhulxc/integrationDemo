@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("tb_role")
+@TableName("tb_role.sql")
 public class Role {
 
     /**

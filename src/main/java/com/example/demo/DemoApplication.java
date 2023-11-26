@@ -19,7 +19,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @MapperScan("com.example.demo.module.*.dao")
 public class DemoApplication {
-
     public static void main(String[] args) {
         var ioc = SpringApplication.run(DemoApplication.class, args);
 

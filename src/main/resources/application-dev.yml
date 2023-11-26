@@ -34,11 +34,8 @@ spring:
     logSlowSql: true
 
 # mp setting
-mybatis-plus:
+mybatis:
   mapper-locations: classpath:mapper/**/*.xml
-  global-config:
-    db-config:
-      table-prefix:
   configuration:
     # log of sql
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
