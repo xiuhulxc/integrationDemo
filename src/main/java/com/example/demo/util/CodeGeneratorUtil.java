@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.util;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
