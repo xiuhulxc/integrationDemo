@@ -8,7 +8,7 @@
 
     </resultMap>
     <select id="listResourceRoles" resultType="com.example.demo.entity.po.Role">
-        select * from test.tb_role;
+        select * from tb_role;
     </select>
 
 
