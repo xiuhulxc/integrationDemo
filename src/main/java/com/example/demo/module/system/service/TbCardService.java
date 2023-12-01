@@ -1,6 +1,6 @@
 package com.example.demo.module.system.service;
 
-import com.example.demo.module.system.entity.TbRole;
+import com.example.demo.module.system.entity.TbCard;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author LiuXuChao
  * @since 2023-12-01
  */
-public interface ITbRoleService extends IService<TbRole> {
+public interface TbCardService extends IService<TbCard> {
 
 }

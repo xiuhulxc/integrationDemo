@@ -2,8 +2,8 @@ package com.example.demo.module.system.service.impl;
 
 import com.example.demo.module.system.entity.TbCard;
 import com.example.demo.module.system.mapper.TbCardMapper;
-import com.example.demo.module.system.service.ITbCardService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.example.demo.module.system.service.TbCardService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-12-01
  */
 @Service
-public class TbCardServiceImpl extends ServiceImpl<TbCardMapper, TbCard> implements ITbCardService {
+public class TbCardServiceImpl extends ServiceImpl<TbCardMapper, TbCard> implements TbCardService {
 
 }

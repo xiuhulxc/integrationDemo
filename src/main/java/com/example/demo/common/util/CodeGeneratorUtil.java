@@ -30,7 +30,7 @@ public class CodeGeneratorUtil {
         globalConfig.setOpen(false);
         globalConfig.setIdType(IdType.ASSIGN_ID);
         globalConfig.setDateType(DateType.ONLY_DATE);
-        // globalConfig.setServiceName("%sService");	//去掉Service接口的首字母I
+        globalConfig.setServiceName("%sService");	//去掉Service接口的首字母I
         globalConfig.setSwagger2(true);//开启Swagger2模式
 
         generator.setGlobalConfig(globalConfig);
@@ -58,7 +58,7 @@ public class CodeGeneratorUtil {
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setControllerMappingHyphenStyle(true);
         // 指定要生成的表名，可变参数，可以传入多个表名
-        strategyConfig.setInclude("tb_card");
+        strategyConfig.setInclude("tb_user");
         generator.setStrategy(strategyConfig);
 
         // 执行生成代码

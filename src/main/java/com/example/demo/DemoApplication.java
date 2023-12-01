@@ -17,7 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 // @EnableSchedulerLock(defaultLockAtMostFor = "PT30S")
 @ServletComponentScan
 @SpringBootApplication
-@MapperScan("com.example.demo.module.*.dao")
+@MapperScan("com.example.demo.module.*.mapper")
 public class DemoApplication {
     public static void main(String[] args) {
         var ioc = SpringApplication.run(DemoApplication.class, args);
