@@ -30,7 +30,7 @@ public class CodeGeneratorUtil {
         globalConfig.setOpen(false);
         globalConfig.setIdType(IdType.ASSIGN_ID);
         globalConfig.setDateType(DateType.ONLY_DATE);
-        globalConfig.setServiceName("%sService");	//去掉Service接口的首字母I
+        // globalConfig.setServiceName("%sService");	//去掉Service接口的首字母I
         globalConfig.setSwagger2(true);//开启Swagger2模式
 
         generator.setGlobalConfig(globalConfig);
@@ -39,15 +39,15 @@ public class CodeGeneratorUtil {
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/eom_cm_new_adb?useSSL=false&serverTimezone=UTC");
+        dataSourceConfig.setUrl("jdbc:mysql://8.141.13.177:11306/ceshi?useSSL=false&serverTimezone=UTC");
         dataSourceConfig.setUsername("root");
         dataSourceConfig.setPassword("root");
         generator.setDataSource(dataSourceConfig);
 
         // 包配置
         PackageConfig packageConfig = new PackageConfig();
-        packageConfig.setParent("com.emos.transmissionextension");
-        packageConfig.setModuleName("mybatisplus");
+        packageConfig.setParent("com.example.demo");
+        packageConfig.setModuleName("module.system");
         generator.setPackageInfo(packageConfig);
 
         // 策略配置
@@ -58,7 +58,7 @@ public class CodeGeneratorUtil {
         strategyConfig.setRestControllerStyle(true);
         strategyConfig.setControllerMappingHyphenStyle(true);
         // 指定要生成的表名，可变参数，可以传入多个表名
-        strategyConfig.setInclude("flow_cutover_platform_transfer");
+        strategyConfig.setInclude("tb_card");
         generator.setStrategy(strategyConfig);
 
         // 执行生成代码
