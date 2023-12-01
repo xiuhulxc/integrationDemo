@@ -2,6 +2,13 @@ server:
   port: 11000
 
 spring:
+  data:
+    redis:
+      port: 10079
+      host: 8.141.13.177
+      password:
+
+
   datasource:
     url: jdbc:mysql://8.141.13.177:11306/ceshi?allowPublicKeyRetrieval=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&rewriteBatchedStatements=true
 #    url: jdbc:mysql://localhost:3306/test?allowPublicKeyRetrieval=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&rewriteBatchedStatements=true
@@ -31,7 +38,7 @@ spring:
     #合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
     driverClassName: com.mysql.cj.jdbc.Driver
-#    logSlowSql: true
+    logSlowSql: true
 
 # mp setting
 mybatis:
@@ -63,3 +70,5 @@ logging:
   level:
     root: info
     com.example.demo: debug
+
+

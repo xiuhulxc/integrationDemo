@@ -28,7 +28,7 @@ public class DemoApplication {
         // dispatcherServlet、beanNameViewResolver、characterEncodingFilter、multipartResolver
         // SpringBoot把以前配置的核心组件现在都给我们自动配置好了。
         for (String name : names) {
-            System.out.println(name);
+            // System.out.println(name);
         }
     }
 }
