@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import com.example.demo.entity.po.ApiLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -11,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author LiuXuChao
@@ -20,7 +22,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="TbMenu对象", description="")
-public class TbMenu implements Serializable {
+public class TbMenu extends ApiLogic implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -36,12 +38,6 @@ public class TbMenu implements Serializable {
     private String roleId;
 
     private String menuEn;
-
-    private String isDeleted;
-
-    private Date createTime;
-
-    private Date updateTime;
 
 
 }

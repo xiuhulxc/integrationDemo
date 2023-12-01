@@ -22,5 +22,5 @@ public class ApiLogic extends BaseTime{
 
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
-    private Integer isDeleted = 0;
+    private String isDeleted = "0";
 }

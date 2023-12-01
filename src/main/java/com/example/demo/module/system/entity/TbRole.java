@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import com.example.demo.entity.po.ApiLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -11,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author LiuXuChao
@@ -20,7 +22,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="TbRole对象", description="")
-public class TbRole implements Serializable {
+public class TbRole extends ApiLogic implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,11 +42,7 @@ public class TbRole implements Serializable {
     @ApiModelProperty(value = "是否禁用  0否 1是")
     private Boolean isDisable;
 
-    @ApiModelProperty(value = "创建时间")
-    private Date createTime;
 
-    @ApiModelProperty(value = "更新时间")
-    private Date updateTime;
 
 
 }
