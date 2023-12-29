@@ -29,6 +29,16 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        public-key: ${{ secrets.SSH_PUBLIC_KEY }}
+        known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+        # 注意：请将 secrets 的名称替换为你实际使用的密钥信息的名称
+    - name: Deploy to server
+      run: |
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} user@your-server 'cd /path/to/your/app && git pull origin main && npm install && npm run build && pm2 restart your-app'
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
